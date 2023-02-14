@@ -20,7 +20,7 @@ export const App = () => {
       ></Profile>
       <Statistics stats={data} title="Upload stats"></Statistics>
       <FriendList friends={friends}></FriendList>
-      {/* <TransactionHistory items={transactions}></TransactionHistory> */}
+      <TransactionHistory items={transactions}></TransactionHistory>
     </div>
   );
 };

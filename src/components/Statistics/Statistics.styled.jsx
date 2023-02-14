@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  width: 400px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -18,7 +18,7 @@ export const Title = styled.h2`
 
 export const List = styled.ul`
   margin: 0;
-
+  width: inherit;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -40,11 +40,13 @@ function getColor(props) {
       return '#22B8C2';
     case 'id-5':
       return 'gold';
+    default:
+      return getRandomHexColor();
   }
 }
 export const Item = styled.li`
-  width: 80px;
-  padding: 10px 0;
+  width: inherit;
+  padding: 10px 0px;
   display: flex;
   flex-direction: column;
   text-align: center;

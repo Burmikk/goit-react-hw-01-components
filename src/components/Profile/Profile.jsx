@@ -1,13 +1,6 @@
+import { ListInfo } from './List';
 import PropTypes from 'prop-types';
-import {
-  UserProfile,
-  UserImg,
-  Box,
-  UserName,
-  List,
-  ListItem,
-  Label,
-} from './Profile.styled';
+import { UserProfile, UserImg, Box, UserName } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
@@ -15,24 +8,11 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       <UserProfile>
         <UserImg src={avatar} alt="User avatar" />
         <UserName>{username}</UserName>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
+        <p>@{tag}</p>
+        <p>{location}</p>
       </UserProfile>
 
-      <List>
-        <ListItem>
-          <Label class="label">Followers</Label>
-          <span class="quantity">{stats.followers}</span>
-        </ListItem>
-        <ListItem>
-          <Label class="label">Views</Label>
-          <span class="quantity">{stats.views}</span>
-        </ListItem>
-        <ListItem>
-          <Label class="label">Likes</Label>
-          <span class="quantity">{stats.likes}</span>
-        </ListItem>
-      </List>
+      <ListInfo stats={stats}></ListInfo>
     </Box>
   );
 };
@@ -42,5 +22,5 @@ Profile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.objectOf(PropTypes.number),
+  stats: PropTypes.object,
 };
