@@ -1,4 +1,4 @@
-import { ListItem, Label, List } from './Profile.styled';
+import { ListItem, Label, List } from './List.styled';
 import PropTypes from 'prop-types';
 
 export const ListInfo = ({ stats }) => {
