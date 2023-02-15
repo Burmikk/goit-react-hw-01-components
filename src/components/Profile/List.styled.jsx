@@ -4,7 +4,6 @@ export const List = styled.ul`
   margin: 0;
   display: flex;
   background-color: #f4f6f9;
-  border-radius: 0 0 10px 10px;
 `;
 
 export const ListItem = styled.li`

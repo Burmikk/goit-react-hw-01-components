@@ -5,15 +5,15 @@ export const Box = styled.div`
   height: 380px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
   margin-bottom: 50px;
+  overflow: hidden;
+  border-radius: 20px;
 `;
 
 export const UserProfile = styled.div`
   text-align: center;
   padding: 30px;
   background-color: white;
-  border-radius: 10px 10px 0 0;
 `;
 
 export const UserImg = styled.img`
