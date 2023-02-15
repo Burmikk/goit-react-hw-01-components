@@ -1,14 +1,6 @@
-.friend_list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 250px;
-  margin-top: 0;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.item {
+import styled from 'styled-components';
+
+export const Item = styled.li`
   background-color: white;
 
   padding-left: 15px;
@@ -17,23 +9,21 @@
   align-items: center;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+`;
+
+function setBgColor({ flag }) {
+  return flag ? 'green' : 'red';
 }
 
-.status {
+export const Status = styled.span`
   display: block;
   width: 20px;
   height: 20px;
-  background-color: red;
+  background-color: ${setBgColor};
   border-radius: 50%;
-}
-.name {
-}
-.online {
-  composes: status;
-  background-color: green;
-}
+`;
 
-.img {
+export const Image = styled.img`
   border-radius: 10px;
   background-color: grey;
-}
+`;

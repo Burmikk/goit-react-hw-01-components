@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomHexColor } from 'helpers/helpers';
 
 export const Section = styled.section`
   width: 500px;
@@ -23,10 +24,6 @@ export const List = styled.ul`
   justify-content: space-between;
   text-align: center;
 `;
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
 
 function getColor(props) {
   switch (props.number) {
