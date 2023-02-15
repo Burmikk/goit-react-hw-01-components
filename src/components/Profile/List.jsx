@@ -21,11 +21,9 @@ export const ListInfo = ({ stats }) => {
 };
 
 List.propTypes = {
-  stats: PropTypes.objectOf(
-    PropTypes.shape({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    })
-  ),
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
