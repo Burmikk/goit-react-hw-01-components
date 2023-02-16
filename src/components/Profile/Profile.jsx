@@ -1,4 +1,4 @@
-import { ListInfo } from './List';
+import { ListInfo } from './ListInfo';
 import PropTypes from 'prop-types';
 import { UserProfile, UserImg, Box, UserName } from './Profile.styled';
 
@@ -22,7 +22,7 @@ Profile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.shape({
+  stats: PropTypes.objectOf({
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,

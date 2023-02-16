@@ -6,6 +6,8 @@ export const Section = styled.section`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+  overflow: hidden;
+  border-radius: 20px;
 `;
 
 export const Title = styled.h2`
@@ -14,7 +16,6 @@ export const Title = styled.h2`
   padding-bottom: 30px;
   text-align: center;
   background-color: white;
-  border-radius: 10px 10px 0 0;
 `;
 
 export const List = styled.ul`
@@ -48,12 +49,6 @@ export const Item = styled.li`
   flex-direction: column;
   text-align: center;
   background-color: ${getColor};
-  :first-child {
-    border-radius: 0 0 0 10px;
-  }
-  :last-child {
-    border-radius: 0 0 10px 0;
-  }
 `;
 
 export const FileFormat = styled.span`
